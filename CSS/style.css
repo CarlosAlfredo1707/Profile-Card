@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-color: var(--Dark-cyan);
+    background-position-x: -100vw, 30vw;
+    background-position-y: -30vh, 60vh;
+    background-size: 70vh;
+    background-repeat: no-repeat;
+}
+
+.card {
+    width: 300px;
+    height: 380px;
+    margin:250px auto;
+    border-radius: 10px;
+    background-color: #fff;
+    background-image: url('../images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+}
+.card__img {
+    text-align: center;
+    padding-top: 90px;
+}
+
+.card__victor {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom:10px ;
+}
+.card__name {
+    display: flex;
+    padding-left: 70px;
+    gap:15px;
+    align-items: center;
+}
+.card__names {
+    font-size: 20px;
+    display:inline;
+    text-align: center;
+    font-weight: 700;
+}
+.card__age{
+    font-size: 20px;
+    font-weight: 400;
+    display: inline;
+    color:var(--Dark-gray);
+}
+.card__city {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color:var(--Dark-gray);
+    box-shadow: 0 1px hsla(0, 0%, 59%, 0.60);
+}
+.card__stats {
+    display: grid;
+    padding: 20px ;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "num1 num2 num3"
+    "followers likes photos";
+}
+.card__number {
+    font-size: 20px;
+    grid-area: num1;
+}
+.card__number--2 {
+    grid-area: num2;
+}
+
+.card__number--3 {
+    grid-area: num3;
+}
+
+.card__text {
+    grid-area: followers;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color:var(--Dark-gray);
+}
+.card__text--2 {
+    grid-area: likes;
+}
+.card__text--3 {
+    grid-area: photos;
+}
+
+@media (min-width:768px) {
+    body {
+        background-position-x: 0vw, 60vw;
+        background-position-y: -40vh, 50vh;
+        background-size: 90vh, 100vh;
+    
+    }
+}
